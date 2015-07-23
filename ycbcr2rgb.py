@@ -3,6 +3,10 @@
 #// Cb/Cr        [16...240]
 #// R/G/B        [0...255]
 import sys
+
+def clamp(n, minn, maxn):
+	return max(min(maxn, n), minn)
+
 y = sys.argv[1]
 cb = sys.argv[2]
 cr = sys.argv[3]
@@ -17,5 +21,9 @@ b = 1.164 * yM - 0.368 * cbM - 0.071 * crM;
 r = int(round(r))
 g = int(round(g))
 b = int(round(b))
+
+r = clamp(r,0,255)
+g = clamp(g,0,255)
+b = clamp(b,0,255)
 
 print ("RGB", r,g,b, "YCbCr", y, cb, cr)
