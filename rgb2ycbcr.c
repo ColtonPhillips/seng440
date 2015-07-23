@@ -5,6 +5,14 @@
 // Y		[16...235]
 // Cb/Cr 	[16...240]
 
+// return x clamped between a and b
+inline int clamp(int x, int a, int b) {
+
+	if (x < a) { return a;}
+	else if (x > b) {return b;}
+	else { return x;}
+}
+
 int main(int argc, char *argv[])
 {
 	int r = atoi(argv[1]);
@@ -19,6 +27,9 @@ int main(int argc, char *argv[])
 	int y = round(_y); 
 	int cb = round(_cb); 
 	int cr = round(_cr); 
+	y = clamp(y,16,255);
+	cb = clamp(cb,16,240);
+	cr = clamp(cr,16,240);
 
 	printf("R: %i, G: %i, B: %i\n\n", r, g, b);
 	printf("Float: _Y: %f, _Cb: %f, _Cr: %f\n\n", _y, _cb, _cr);
