@@ -32,7 +32,9 @@ int main(int argc, char *argv[])
 	g = clamp(g,0,255);
 	b = clamp(b,0,255);
 
-	printf("In: Y: %i, Cb: %i, Cr: %i\n\n", y, cb, cr);
-	printf("Float: _R: %f, _G: %f, _B: %f\n\n", _r, _g, _b);
-	printf("Int: R: %i, G: %i, B: %i\n\n", r, g, b);
+	//printf("In: Y: %i, Cb: %i, Cr: %i\n\n", y, cb, cr);
+	//printf("Float: _R: %f, _G: %f, _B: %f\n\n", _r, _g, _b);
+	//printf("Int: R: %i, G: %i, B: %i\n\n", r, g, b);
+
+	printf("('RGB', %i, %i, %i, 'YCbCr', %i, %i, %i)\n", r, g, b, y, cb, cr);
 }

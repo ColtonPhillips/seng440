@@ -7,9 +7,9 @@ import sys
 def clamp(n, minn, maxn):
 	return max(min(maxn, n), minn)
 
-y = sys.argv[1]
-cb = sys.argv[2]
-cr = sys.argv[3]
+y = int(sys.argv[1])
+cb = int(sys.argv[2])
+cr = int(sys.argv[3])
 yM = int(y) - 16
 cbM = int(cb) - 128
 crM = int(cr) - 128

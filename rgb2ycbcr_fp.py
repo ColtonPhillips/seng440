@@ -4,6 +4,10 @@
 
 import sys 
 import time
+
+def clamp(n, minn, maxn):
+	return max(min(maxn, n), minn)
+
 r = int(sys.argv[1])
 g = int(sys.argv[2])
 b = int(sys.argv[3])
@@ -19,5 +23,9 @@ cr = 128 + ((112 * r - 94 * g - 18 * b) >> 8)
 #y = int(round(y))
 #cb = int(round(cb))
 #cr = int(round(cr))
-print ("RGB: ", r, g, b)
-print ("YCbCr: ", y, cb, cr)
+
+y = clamp(y,16,235)
+cb = clamp(cb,16,240)
+cr = clamp(cr,16,240)
+
+print ("RGB", r,g,b, "YCbCr", y, cb, cr)

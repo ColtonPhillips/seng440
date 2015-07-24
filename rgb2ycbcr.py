@@ -23,5 +23,4 @@ y = clamp(y,16,235)
 cb = clamp(cb,16,240)
 cr = clamp(cr,16,240)
 
-print ("RGB: ", r, g, b)
-print ("YCbCr: ", y, cb, cr)
+print ("RGB", r,g,b, "YCbCr", y, cb, cr)
