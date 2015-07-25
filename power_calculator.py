@@ -7,7 +7,9 @@ def convert(f):
 	return (f * pow(2,n))
 
 def print_value(f):
-	print(x,int(round(convert(f))))
+	print()
+	print(f,convert(f))
+	print(f,int(round(convert(f))))
 
 #y = 16 + 0.257 * r + 0.504 * g + 0.098 * b;
 #cb = 128 - 0.148 * r - 0.291 * g + 0.439 * b;
