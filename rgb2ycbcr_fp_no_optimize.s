@@ -1,7 +1,3 @@
--bash-4.2$ arm-linux-gcc -S rgb2ycbcr_fp.c rgb2ycbcr_fp.c
--bash-4.2$ ls
-example.exe  hello.c  hello.exe  rgb2ycbcr_fp.c  rgb2ycbcr_fp.s
--bash-4.2$ cat rgb2ycbcr_fp.s
         .arch armv4t
         .fpu softvfp
         .eabi_attribute 20, 1
@@ -245,4 +241,3 @@ main:
         .size   main, .-main
         .ident  "GCC: (Sourcery G++ Lite 2008q3-72) 4.3.2"
         .section        .note.GNU-stack,"",%progbits
--bash-4.2$
