@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 
 	int r = (76284 * yM + 104595 * crM + 32768) 		>> 16;
 	int g = (76284 * yM - 25690 * cbM - 53281 * crM + 32768)>> 16;
-	int b = (76284 * yM - 24117 * cbM - 4653 * crM + 32768)	>> 16;
+	int b = (76284 * yM + 135725 * cbM + 32768)		>> 16;
 	
 	r = clamp(r,0,255);
 	g = clamp(g,0,255);

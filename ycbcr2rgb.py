@@ -16,7 +16,7 @@ crM = int(cr) - 128
 
 r = 1.164 * yM + 1.596 * crM;
 g = 1.164 * yM - 0.392 * cbM - 0.813 * crM;
-b = 1.164 * yM - 0.368 * cbM - 0.071 * crM;
+b = 1.164 * yM + 2.017 * cbM;
 
 r = int(round(r))
 g = int(round(g))

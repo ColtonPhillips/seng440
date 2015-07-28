@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 
 	float _r = 1.164 * yM + 1.596 * crM;
 	float _g = 1.164 * yM - 0.392 * cbM - 0.813 * crM;
-	float _b = 1.164 * yM - 0.368 * cbM - 0.071 * crM;
+	float _b = 1.164 * yM + 2.017  * cbM;
 	
 	int r = round(_r);
 	int g = round(_g);
