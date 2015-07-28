@@ -21,13 +21,9 @@ int main(int argc, char *argv[])
 	int cbM = cb - 128;
 	int crM = cr - 128;
 
-	float _r = 1.164 * yM + 1.596 * crM;
-	float _g = 1.164 * yM - 0.392 * cbM - 0.813 * crM;
-	float _b = 1.164 * yM - 0.368 * cbM - 0.071 * crM;
-	
-	int r = round(_r);
-	int g = round(_g);
-	int b = round(_b);
+	int r = (76284 * yM + 104595 * crM + 32768) 		>> 16;
+	int g = (76284 * yM - 25690 * cbM - 53281 * crM + 32768)>> 16;
+	int b = (76284 * yM - 24117 * cbM - 4653 * crM + 32768)	>> 16;
 	
 	r = clamp(r,0,255);
 	g = clamp(g,0,255);

@@ -13,19 +13,12 @@ yM = y - 16
 cbM = cb - 128
 crM = cr - 128
 
+r = (76284 * yM + 104595 * crM + 32768) 		>> 16
+g = (76284 * yM - 25690 * cbM - 53281 * crM + 32768) 	>> 16
+b = (76284 * yM - 24117 * cbM - 4653 * crM + 32768)	>> 16
 
-r = (298 * yM + 409 * crM) >> 8
-g = (298 * yM - 100 * cbM - 208 * crM) >> 8
-b = (298 * yM - 94 * cbM - 18 * crM) >> 8
 r = clamp(r,0,255)
 g = clamp(g,0,255)
 b = clamp(b,0,255)
-
-#r = 1.164 * yM + 1.596 * crM;
-#g = 1.164 * yM - 0.392 * cbM - 0.813 * crM;
-#b = 1.164 * yM - 0.368 * cbM - 0.071 * crM;
-#r = int(round(r))
-#g = int(round(g))
-#b = int(round(b))
 
 print ("RGB", r,g,b, "YCbCr", y, cb, cr)
