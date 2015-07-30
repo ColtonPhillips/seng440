@@ -20,7 +20,7 @@ def cycles(s):
 	if (s == "str"):
 		c = 2
 	if (s == "mul"):
-		c = 4
+		c = 3
 	if (s == "mle"):
 		c = 2
 	if (s == "ble" or s == "bge"):
@@ -41,11 +41,11 @@ for line in lines:
 
 	val = cycles(first_word)
 	if (val == 0):
-		print("?", line)
+		print("?   " + line)
 	else:
-		print (val, line)
+		print (str(val) + "   " + line)
 		count_dict[current_item] += val	
 
-print ("\n\n\n")
+print ("\n\n Cycles per section: \n")
 pp.pprint(count_dict)
-print ("TOTAL: ",sum(count_dict.values()))
+print ("TOTAL: " + str(sum(count_dict.values())))

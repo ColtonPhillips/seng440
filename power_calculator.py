@@ -7,9 +7,9 @@ def convert(f):
 	return (f * pow(2,n))
 
 def print_value(f):
-	print()
+#	print()
 	print(f,convert(f))
-	print(f,int(round(convert(f))))
+#	print(f,int(round(convert(f))))
 
 matrix_values = [0.257, 0.504, 0.098,
 		-0.148, -0.291, 0.439,
